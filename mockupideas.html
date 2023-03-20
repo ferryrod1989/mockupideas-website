@@ -1,0 +1,591 @@
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/content1.css">
+    <link rel="stylesheet" href="styles/content2.css">
+    <link rel="stylesheet" href="styles/content3.css">
+    <link rel="stylesheet" href="styles/content4.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">  
+    <style>
+      *{
+        height: auto;
+        box-sizing: border-box;
+      }
+
+      body{
+        height: 100%;
+        margin: 0;
+        font-family: open Sans, arial;
+        font-size: 1rem;
+        font-weight: 600px;
+      }
+
+      .container{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+        "nav"
+        "banner"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "footer";
+        z-index: 1;
+      }
+
+      @media all and (max-width: 480px){
+
+        .container{
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          "nav"
+          "banner"
+          "content1"
+          "content2"
+          "content3"
+          "content4"
+          "footer";
+        }
+
+        nav{      
+          grid-area: nav;       
+          border-bottom-style: solid;
+          border-bottom-width: 1px;
+          color: rgb(191, 187, 187);
+        }
+
+        .nav-link ul{
+          width: 100%;
+          background: linear-gradient(to right,#fb5283, #ff3527);
+          position: absolute;
+          top: 100px;
+          right: 0;
+          z-index: 2;
+          margin-top: 0;
+        }
+
+        .nav-link ul li{
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 18px;
+        }
+
+        .nav-link ul li a{
+          color: rgb(255, 255, 255);
+        }
+
+        .menu-icon{
+          display: block;
+        }
+
+        #menuList{
+          overflow: hidden;
+          transition: 0.5s;
+        }
+
+        banner{
+          grid-area: banner;
+        }
+
+        banner div div{
+          width: 100%;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        .banner-title{
+          font-size: 45px;
+          letter-spacing: 7px;
+          font-weight: 600px;
+        }
+
+        .banner-subtitle{
+          font-size: 13px;
+          letter-spacing: 6px;
+        }
+
+        #content1{
+          height: auto;
+          grid-area: content1;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container1{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50px 1fr;
+          row-gap: 15px;
+        }
+
+        .intro-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          row-gap: 15px;
+          grid-row: auto;
+        }
+        
+        #content2{
+          height: auto;
+          grid-area: content2;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container2 {
+          display: grid;
+          grid-template-rows: auto;
+        }
+
+        .column-width{
+          column-count: 1;
+          padding-left: 14px;
+        }
+
+        #content3{
+          grid-area: content3;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container3 {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 300px 300px 300px 300px 300px 300px;
+        }
+
+
+        #content4{
+          height: 100%;
+          grid-area: content4;
+          background-color: #344A66;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container4{
+          grid-template-columns: 1fr;
+          grid-template-rows: 80px 1fr;  
+          grid-template-areas:
+          "content4-title"
+          "content4-list1";
+          grid-gap: 25px;
+        }
+
+        footer{
+          height: 100%;
+          grid-area: footer;  
+          background-color: rgb(0, 0, 0); 
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        .footer-container{
+          height: 100%;
+          background-color: rgb(0, 0, 0);
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50px 1fr;
+          grid-gap: 25px;
+          }
+
+        .footer-container div{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .footer-form{
+          flex: 1.50;
+          padding: 0px;
+          font-family: open Sans;
+        } 
+      }
+
+      @media all and (min-width: 480px) and (max-width: 768px) {
+        #content1{
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        #content2{
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        #content3 {
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container3 {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 25px;
+        }
+
+        #content4 {
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        footer {
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+
+       @media all and (min-width: 768px) and (max-width: 1024px) {
+        #content1{
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+  
+       #content2 {
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        
+        #content3 {
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container3 {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 25px;
+        }
+
+        #content4 {
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        footer {
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+      
+      @media all and (min-width: 1024px) and (max-width: 1280px) {
+        #content1{
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        #content2 {
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        #content3 {
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .container3 {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 25px;
+        }
+
+        #content4 {
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        footer {
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <nav>
+        <div class="nav-container">
+          <img src="icons/logo.png" class="logo">
+          <div class="nav-link">
+              <ul id="menuList">
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">CONTACT US</a></li>
+              </ul>
+          </div>
+          <img src="icons/hamburger.png" class="menu-icon" 
+          onclick="togglemenu()">
+        </div>
+      </nav>  
+
+      <banner>
+        <div>
+          <img src="drawings/Kitchen 2.jpg">
+          <div>
+            <p class="banner-title">Mockup Ideas</p>
+            <p class="banner-subtitle">WE DESIGN COMMERCIAL AND RESIDENTIAL MILLWORK</p>
+          </div>
+        </div>
+      </banner>
+
+      <div id="content1">
+
+        <div class="container1">
+
+          <div class="intro-title">
+            <div>
+              ABOUT US 
+            </div>     
+          </div>
+
+          <div class="intro-grid">
+
+            <div class="intro-about">            
+              <p>Finding the right drafting team with the experience required to develop millwork drawings could be exhausting but not impossible.
+              </p>
+              <p>Don't look anymore, we are a team of drafters with 7 years of experience designing and drafting millwork drawings for interior designers, woodshops, and home owners.
+              </p>
+              <p>
+                Our experience allowed us to improve and correct design flaws related to cabinetry layouts and  accelerating production time.
+              </p>
+              
+              <p>
+                Architects, interior designers, contractors, millwork shops, and home owners are welcome to work with us to develop their dream projects.
+              </p>
+            </div>
+
+            <div class="image-container">
+              <div>
+                <img class="image1" src="drawings/kitchen 1.jpg">
+              </div>
+            </div>
+          </div>  
+
+
+        </div>
+
+      </div>
+
+      <div id="content2">
+        <div class="container2">
+          <div class="content2-title">
+            <div class="intro-title">
+              RESIDENTIAL DRAFTING EXPERIENCE:
+            </div>
+          </div>
+          <div class="content2-list1">
+            <ul class="column-width">
+              <li><a href="">Custom Main Kitchens Millwork</a></li>
+              <li><a href="">Custom Service Kitchens Millwork</a></li>
+              <li><a href="">Custom Closets Millwork</a></li>
+              <li><a href="">Custom Fireplace Millwork</a></li>
+              <li><a href="">Custom Library Millwork</a></li>    
+              <li><a href="">Custom Laundry millworkk</a></li>
+              <li><a href="">Custom Furniture</a></li>
+              <li><a href="">Door, Casing, Baseboard & Ceiling Trim</a></li>
+              <li><a href="">Custom Fireplace Millwork</a></li>
+              <li><a href="">Custom Library Millwork</a></li>           
+              <li><a href="">Wall Paneling</a></li>
+              <li><a href="">Bathroom Vanities</a></li>
+              <li><a href="">Bars</a></li>        
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="content3">
+        <div class="container3">
+          <div class="container3-image">    
+            <img src="drawings/Residential Kitchen.png" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>RESIDENTIAL KITCHEN</p>
+            </div>      
+          </div>
+
+          <div class="container3-image">    
+            <img src="drawings/Commercial kitchen-1.jpg" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>OFFICE KITCHEN</p>
+            </div>      
+          </div>
+
+          <div class="container3-image">    
+            <img src="drawings/Residential closet.png" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>CLOSETS</p>
+            </div>      
+          </div>
+
+          <div class="container3-image">    
+            <img src="drawings/drawing5.jpg" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>RECEPTIONS</p>
+            </div>      
+          </div>
+
+          <div class="container3-image">    
+            <img src="drawings/Sections-1.jpg" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>MILLWORK SECTIONS</p>
+            </div>      
+          </div>
+
+          <div class="container3-image">    
+            <img src="drawings/drawing3.jpg" class="drawing-sample1">     
+            <div class="tooltip">
+              <p>DETAILS</p>
+            </div>      
+          </div>
+        </div>
+      </div>
+      
+      <div id="content4">
+        <div class="container4">
+          <div class="content4-title">
+            <div class="intro-title">
+              COMMERCIAL DRAFTING EXPERIENCE:
+            </div>
+          </div>
+          <div class="content4-list1">
+            <ul class="column-width">
+              <li><a href="">Reception Desk</a></li>
+              <li><a href="">Office Kitchens</a></li>
+              <li><a href="">Wood Planters</a></li>
+              <li><a href="">Wall and Ceiling Surfacing</a></li>
+              <li><a href="">Wall Trim Cases</a></li>          
+            </ul>
+          </div>
+        </div>
+      </div> 
+
+      <footer>
+        
+        <div class="footer-container">
+
+          <div>
+            <div class="footer-title">
+              <div class="intro-title">
+                CONTACT US
+              </div>
+            </div>           
+          </div>
+          
+          <div>
+            <div class="footer-info">
+              <ul>
+                <li><a>Contact name : Fernando</a></li>
+                <li><a>Email : mockupideas@yahoo.com</a></li>
+                <li><a>Phone: +310 756 5748</a></li>
+                <li><a>Locations: Los angeles California USA</a></li>
+              </ul>
+              
+            </div>
+
+            <div class="footer-form">  
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="australia">United States</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">England</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>  
+        </div>
+      </footer>
+
+    </div>
+
+    <script>
+      var menuList = document.getElementById("menuList");
+  
+      menuList.style.maxHeight = "0px";
+  
+      function togglemenu () {
+  
+        if(menuList.style.maxHeight == "0px")
+          {
+            menuList.style.maxHeight = "170px"  
+          }
+  
+        else {
+            menuList.style.maxHeight = "0px";
+        }
+      }
+  
+    </script>
+
+
+  </body>
+</html>

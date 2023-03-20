@@ -1,0 +1,49 @@
+#content2 {
+  height: auto;
+  background-color: #344A66;
+  grid-area: content2;
+
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container2 {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;  
+  grid-gap: 25px;
+}
+
+
+.content2-title div {
+  height: auto;
+  color: #EDE9E9;
+  font-weight: 600;
+  font-size: 25px;
+  width: auto;
+  padding-top: 7px;
+  border-bottom: 2px solid #EDE9E9;
+}
+
+.column-width {
+  column-width: auto;
+  column-count: 3;
+  margin-top: 0;
+  padding-left: 14px;
+}
+
+.column-width li {
+  margin-top: 0;
+  margin-bottom: 5px;
+  list-style-type: square;
+  color: #EDE9E9;
+}
+
+.column-width li a {
+  text-decoration: none;
+  color: #EDE9E9;
+}
+
